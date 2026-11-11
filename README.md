@@ -58,9 +58,9 @@ Your own wallpapers live outside the theme, in `~/.config/omarchy/backgrounds/pe
 
 ## Notes
 
-- Terminal and editor configs are not shipped: a repo install would strip them,
-  and the generated ones follow `colors.toml` anyway. The work tree that
-  produced this repository keeps them locally.
+- The theme directory and this repository are the same file set. There are no
+  local-only overrides: `hyprland.lua`, the terminal configs and `vscode.json`
+  are rendered from `colors.toml` at staging and never live in the theme.
 - GTK deviations are deliberate: row hover is a gold tint over the view rather
   than flat `lighter_background`, disabled buttons sit on the field colour, and
   tooltips use `darker_background`. Measured with `measure-gtk-theme.py`, every
