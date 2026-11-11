@@ -1,10 +1,12 @@
 __pycache__/
 *.pyc
 
-# Local only. A repo install regenerates these from colors.toml, and the
+# Local only — never track these. omarchy-theme-set strips them from a theme
+# installed out of a git repo and regenerates them from colors.toml, and the
 # gallery audit rejects a theme that ships them.
-hyprland.lua
+*.lua
 alacritty.toml
 foot.ini
 ghostty.conf
 kitty.conf
+vscode.json
