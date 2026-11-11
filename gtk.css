@@ -1,0 +1,468 @@
+/* Peacock — GTK3 / GTK4 / libadwaita.
+   Deep peacock surfaces, parchment text, gold focus and selection.
+   Two layers: the Adwaita symbol block below, then explicit surface rules,
+   because a plain GTK 4 window reads only the legacy theme_* symbols. */
+
+/* ---- palette ---------------------------------------------------------- */
+@define-color background      #0b3337;
+@define-color darker_bg       #041e22;
+@define-color dark_bg         #08262a;
+@define-color lighter_bg      #124046;
+
+@define-color foreground      #e3cba3;
+@define-color light_fg        #d4b78e;
+@define-color dim_fg          #b69a74;
+@define-color bright_fg       #f6e9ce;
+@define-color muted           #7e938c;
+
+@define-color accent          #d8b379;
+@define-color selection_bg    #6b351c;
+@define-color red             #d98a6a;
+@define-color green           #8fbf9c;
+@define-color yellow          #e3c48a;
+@define-color blue            #93bac8;
+@define-color magenta         #c79ba8;
+@define-color cyan            #6fbfc0;
+
+/* ---- Adwaita semantics (libadwaita + GTK3 legacy) ---------------------- */
+@define-color accent_bg_color @selection_bg;
+@define-color accent_fg_color @bright_fg;
+@define-color accent_color @accent;
+
+@define-color window_bg_color @background;
+@define-color window_fg_color @foreground;
+
+@define-color view_bg_color @dark_bg;
+@define-color view_fg_color @foreground;
+
+@define-color headerbar_bg_color @background;
+@define-color headerbar_fg_color @foreground;
+@define-color headerbar_backdrop_color @darker_bg;
+@define-color headerbar_shade_color alpha(@foreground, 0.08);
+
+@define-color card_bg_color @dark_bg;
+@define-color card_fg_color @foreground;
+@define-color card_shade_color alpha(@foreground, 0.08);
+
+@define-color dialog_bg_color @background;
+@define-color dialog_fg_color @foreground;
+
+@define-color popover_bg_color @dark_bg;
+@define-color popover_fg_color @foreground;
+
+@define-color sidebar_bg_color @darker_bg;
+@define-color sidebar_fg_color @foreground;
+@define-color sidebar_backdrop_color @darker_bg;
+@define-color sidebar_shade_color alpha(@foreground, 0.06);
+
+@define-color destructive_bg_color @red;
+@define-color destructive_fg_color @background;
+@define-color success_bg_color @green;
+@define-color success_fg_color @background;
+@define-color warning_bg_color @yellow;
+@define-color warning_fg_color @background;
+@define-color error_bg_color @red;
+@define-color error_fg_color @background;
+
+@define-color borders alpha(@foreground, 0.14);
+
+@define-color theme_fg_color @foreground;
+@define-color theme_text_color @foreground;
+@define-color theme_bg_color @background;
+@define-color theme_base_color @dark_bg;
+@define-color theme_selected_bg_color @selection_bg;
+@define-color theme_selected_fg_color @bright_fg;
+@define-color insensitive_bg_color @background;
+@define-color insensitive_fg_color @muted;
+@define-color insensitive_base_color @dark_bg;
+@define-color theme_unfocused_fg_color @foreground;
+@define-color theme_unfocused_text_color @foreground;
+@define-color theme_unfocused_bg_color @background;
+@define-color theme_unfocused_base_color @dark_bg;
+@define-color theme_unfocused_selected_bg_color @selection_bg;
+@define-color theme_unfocused_selected_fg_color @bright_fg;
+@define-color unfocused_insensitive_color @muted;
+@define-color unfocused_borders alpha(@foreground, 0.10);
+@define-color warning_color @yellow;
+@define-color error_color @red;
+@define-color success_color @green;
+@define-color destructive_color @red;
+@define-color content_view_bg @dark_bg;
+@define-color text_view_bg @dark_bg;
+
+/* ---- surfaces --------------------------------------------------------- */
+window,
+window.background,
+.background,
+dialog,
+messagedialog,
+alertdialog,
+.alert-dialog {
+  background-color: @background;
+  color: @foreground;
+}
+
+headerbar,
+headerbar.titlebar,
+.titlebar {
+  background-color: @background;
+  background-image: none;
+  color: @foreground;
+  border-color: @borders;
+  box-shadow: none;
+}
+
+headerbar:backdrop,
+headerbar.titlebar:backdrop {
+  background-color: @darker_bg;
+  color: @muted;
+}
+
+headerbar .title,
+.titlebar .title {
+  font-weight: bold;
+}
+
+popover,
+popover.background,
+menu,
+menubar > item,
+.tooltip,
+tooltip {
+  background-color: @dark_bg;
+  background-image: none;
+  color: @foreground;
+  border: 1px solid @borders;
+}
+
+tooltip,
+.tooltip {
+  background-color: @darker_bg;
+  color: @bright_fg;
+  border-color: alpha(@accent, 0.5);
+}
+
+/* ---- content nodes ---------------------------------------------------- */
+.view,
+textview text,
+textview.view,
+scrolledwindow viewport,
+iconview,
+flowbox,
+flowboxchild {
+  background-color: @dark_bg;
+  color: @foreground;
+}
+
+list,
+listview,
+columnview,
+treeview.view,
+list > row,
+listview > row,
+columnview > listview > row,
+flowboxchild,
+treeview.view:selected {
+  background-color: @dark_bg;
+  color: @foreground;
+}
+
+list > row,
+listview > row,
+columnview > listview > row,
+flowboxchild {
+  border-color: alpha(@foreground, 0.06);
+}
+
+list > row:hover,
+listview > row:hover,
+columnview > listview > row:hover,
+flowboxchild:hover,
+treeview.view:hover {
+  background-color: alpha(@accent, 0.10);
+  color: @bright_fg;
+}
+
+list > row:selected,
+list > row:selected:hover,
+listview > row:selected,
+columnview > listview > row:selected,
+flowboxchild:selected,
+treeview.view:selected,
+.view:selected {
+  background-color: @selection_bg;
+  color: @bright_fg;
+}
+
+list > row:selected label,
+listview > row:selected label {
+  color: @bright_fg;
+}
+
+columnview > header > button,
+treeview.view header button {
+  background-color: @background;
+  background-image: none;
+  color: @light_fg;
+  border-color: @borders;
+}
+
+/* ---- controls --------------------------------------------------------- */
+entry,
+spinbutton,
+searchentry,
+.password {
+  background-color: @darker_bg;
+  background-image: none;
+  color: @foreground;
+  border: 1px solid @borders;
+  caret-color: @accent;
+  box-shadow: none;
+}
+
+entry:focus-within,
+spinbutton:focus-within,
+entry:focus,
+spinbutton:focus {
+  border-color: @accent;
+  box-shadow: inset 0 0 0 1px alpha(@accent, 0.6);
+}
+
+entry:disabled,
+spinbutton:disabled {
+  background-color: @background;
+  color: @muted;
+}
+
+selection {
+  background-color: alpha(@accent, 0.35);
+  color: @bright_fg;
+}
+
+button,
+button.flat,
+button.circular,
+expander title button {
+  background-color: @lighter_bg;
+  background-image: none;
+  color: @foreground;
+  border: 1px solid alpha(@foreground, 0.12);
+  box-shadow: none;
+}
+
+button:hover,
+button.flat:hover {
+  background-color: alpha(@accent, 0.14);
+  color: @bright_fg;
+  border-color: alpha(@accent, 0.5);
+}
+
+button:active,
+button:checked,
+button.flat:checked {
+  background-color: @selection_bg;
+  color: @bright_fg;
+  border-color: @accent;
+}
+
+button:disabled,
+button.flat:disabled {
+  background-color: @background;
+  color: @muted;
+  border-color: alpha(@foreground, 0.08);
+}
+
+button.suggested-action,
+.suggested-action {
+  background-color: @accent;
+  background-image: none;
+  color: @darker_bg;
+  border-color: @accent;
+}
+
+button.suggested-action:hover {
+  background-color: @yellow;
+  color: @darker_bg;
+}
+
+button.destructive-action,
+.destructive-action {
+  background-color: @red;
+  background-image: none;
+  color: @darker_bg;
+  border-color: @red;
+}
+
+button.destructive-action:hover {
+  background-color: @bright_fg;
+  color: @darker_bg;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid alpha(@accent, 0.75);
+  outline-offset: -2px;
+}
+
+link,
+button.link,
+label link {
+  color: @accent;
+}
+
+link:hover {
+  color: @bright_fg;
+}
+
+/* ---- navigation, cards, dialogs --------------------------------------- */
+.sidebar,
+.navigation-sidebar,
+stacksidebar,
+stacksidebar list,
+placessidebar,
+placessidebar list {
+  background-color: @darker_bg;
+  color: @foreground;
+  border-color: @borders;
+}
+
+.sidebar row:selected,
+.navigation-sidebar row:selected,
+placessidebar row:selected,
+stacksidebar row:selected {
+  background-color: @selection_bg;
+  color: @bright_fg;
+  box-shadow: inset 2px 0 0 @accent;
+}
+
+.sidebar row:hover,
+.navigation-sidebar row:hover {
+  background-color: alpha(@accent, 0.08);
+}
+
+card,
+.card,
+.frame {
+  background-color: @lighter_bg;
+  color: @foreground;
+  border: 1px solid alpha(@foreground, 0.08);
+  box-shadow: none;
+}
+
+row.activatable:hover,
+grid.activatable:hover {
+  background-color: alpha(@accent, 0.08);
+}
+
+messagedialog .secondary-text,
+.alert-dialog .secondary-text,
+.dim-label,
+label.dim-label,
+subtitle {
+  color: @muted;
+  /* Adwaita dims .dim-label to 0.55, which lands muted at 2.2:1; 0.8 keeps it
+     visibly secondary while clearing 3:1. */
+  opacity: 0.8;
+}
+
+messagedialog label,
+alertdialog label {
+  color: @foreground;
+}
+
+/* ---- status widgets --------------------------------------------------- */
+switch {
+  background-color: @darker_bg;
+  border: 1px solid @borders;
+}
+
+switch:checked {
+  background-color: alpha(@accent, 0.55);
+  border-color: @accent;
+}
+
+switch slider {
+  background-color: @bright_fg;
+  border-color: @borders;
+}
+
+checkbutton check,
+check,
+radio,
+checkbutton radio {
+  background-color: @darker_bg;
+  border: 1px solid @borders;
+  color: @darker_bg;
+}
+
+check:checked,
+radio:checked,
+checkbutton check:checked,
+checkbutton radio:checked {
+  background-color: @accent;
+  border-color: @accent;
+  color: @darker_bg;
+}
+
+scale trough,
+scale.horizontal trough,
+levelbar trough,
+progressbar trough {
+  background-color: @darker_bg;
+  border-color: @borders;
+}
+
+scale highlight,
+progressbar progress,
+levelbar block.filled {
+  background-color: @accent;
+}
+
+levelbar block.high {
+  background-color: @yellow;
+}
+
+levelbar block.low {
+  background-color: @red;
+}
+
+scrollbar {
+  background-color: @background;
+}
+
+scrollbar slider {
+  background-color: alpha(@foreground, 0.18);
+  border-color: transparent;
+}
+
+scrollbar slider:hover {
+  background-color: alpha(@accent, 0.45);
+}
+
+separator {
+  background-color: @borders;
+}
+
+toolbar,
+actionbar {
+  background-color: @background;
+  color: @foreground;
+  border-color: @borders;
+}
+
+banner revealer widget {
+  background-color: @selection_bg;
+  color: @bright_fg;
+}
+
+toast {
+  background-color: @darker_bg;
+  color: @foreground;
+  border: 1px solid @borders;
+}
+
+selection,
+::selection {
+  background-color: @selection_bg;
+  color: @bright_fg;
+}

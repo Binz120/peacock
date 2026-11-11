@@ -1,0 +1,48 @@
+# Peacock — a three-anchor palette lifted from the reference card.
+#
+#   peacock    #0B3337  the field: windows, panels, terminal paper
+#   tobacco    #6B351C  selection, pressed fills, the warm low end
+#   parchment  #D4B78E  body text, the light end of every ramp
+#   gold       #D8B379  accent: focus, active border, links, attention
+#
+# The four anchors are closed: every surface below is a lift or drop of one
+# of them. Hue only leaves the anchors for the status/code slots, and only at
+# measured lightness so text stays >= 4.5:1 on the field.
+#
+# accent is a gold, so accent-as-background check: gold field + peacock text = 6.9:1.
+mode = "dark"
+
+accent = "#D8B379"
+selection = "#6B351C"
+muted = "#7E938C"
+
+background = "#0B3337"
+dark_background = "#08262A"
+darker_background = "#041E22"
+lighter_background = "#124046"
+
+foreground = "#E3CBA3"
+dark_foreground = "#B69A74"
+light_foreground = "#D4B78E"
+bright_foreground = "#F6E9CE"
+
+# ANSI slots are code roles, not hue names.
+red = "#D98A6A"
+yellow = "#E3C48A"
+orange = "#D9A05E"
+green = "#8FBF9C"
+cyan = "#6FBFC0"
+blue = "#93BAC8"
+magenta = "#C79BA8"
+brown = "#B07A52"
+
+bright_red = "#E8A184"
+bright_yellow = "#F0D6A2"
+bright_green = "#A6CEB1"
+bright_cyan = "#8FD3D3"
+bright_blue = "#ABCBD7"
+bright_magenta = "#D9B3BE"
+
+# Gold fades into parchment; the inactive edge is the deepest peacock.
+hyprland_active_border = "rgba(d8b379ee) rgba(f6e9ceee) 45deg"
+hyprland_inactive_border = "rgba(041e22aa)"

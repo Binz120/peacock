@@ -1,0 +1,145 @@
+# Omarchy shell surfaces for Peacock.
+# Deep peacock panels, a gold-to-parchment active frame, tobacco selection.
+
+[bar]
+background = "#08262A"
+background-alpha = 1.0
+text = "#E3CBA3"
+active = "#D8B379"
+scale-with-font = true
+size-horizontal = 26
+size-vertical = 28
+
+[hyprland]
+active-border = "rgba(d8b379ee) rgba(f6e9ceee) 45deg"
+active-border-foreground = "#D8B379"
+
+[controls]
+normal-color = "#E3CBA3"
+normal-fill-alpha = 0.05
+normal-border = "#E3CBA3"
+normal-border-width = 1
+normal-border-alpha = 0.34
+
+hover-cursor-color = "#D8B379"
+hover-cursor-fill-alpha = 0.12
+hover-cursor-border = "#D8B379"
+hover-cursor-border-width = 1
+hover-cursor-border-alpha = 0.5
+
+focus-color = "#D8B379"
+focus-fill-alpha = 0.14
+focus-border = "#D8B379"
+focus-border-width = 1
+focus-border-alpha = 0.82
+
+selected-color = "#D8B379"
+selected-fill-alpha = 0.2
+selected-border = "#D8B379"
+selected-border-width = 1
+selected-border-alpha = 0.6
+
+pressed-color = "#6B351C"
+pressed-fill-alpha = 0.6
+selection-color = "#D8B379"
+selection-fill-alpha = 0.3
+
+[spacing]
+scale = 1.0
+scale-with-font = true
+
+[font]
+base-size = 12
+heading = 16
+icon-large = 18
+
+[popups]
+background = "#08262A"
+background-alpha = 1.0
+text = "#E3CBA3"
+border = "rgba(d8b379ee) rgba(f6e9ceee) 90deg"
+border-alpha = 1.0
+border-width = 2
+
+[tooltip]
+background = "#041E22"
+background-alpha = 0.98
+text = "#F6E9CE"
+border = "#D8B379"
+border-alpha = 0.7
+border-width = 1
+
+[notifications]
+background = "#08262A"
+background-alpha = 1.0
+text = "#E3CBA3"
+border = "rgba(d8b379ee) rgba(f6e9ceee) 90deg"
+border-alpha = 1.0
+border-width = 2
+countdown = "#D8B379"
+
+[launcher]
+background = "#041E22"
+background-alpha = 0.97
+text = "#E3CBA3"
+border = "rgba(d8b379ee) rgba(f6e9ceee) 90deg"
+border-alpha = 1.0
+border-width = 2
+scrim = "#041E22"
+scrim-alpha = 0.45
+selected-background = "#D8B379"
+selected-background-alpha = 0.16
+selected-text = "#D8B379"
+selected-border = "#D8B379"
+selected-border-alpha = 0.7
+selected-border-width = 1
+
+[menu]
+background = "#041E22"
+background-alpha = 1.0
+text = "#E3CBA3"
+border = "rgba(d8b379ee) rgba(f6e9ceee) 90deg"
+border-alpha = 1.0
+border-width = 2
+scrim = "#041E22"
+scrim-alpha = 0.45
+selected-background = "#6B351C"
+selected-background-alpha = 1.0
+selected-text = "#F6E9CE"
+selected-border = "#D8B379"
+selected-border-alpha = 0.6
+selected-border-width = 1
+
+[polkit]
+background = "#08262A"
+background-alpha = 1.0
+text = "#E3CBA3"
+text-error = "#D98A6A"
+border = "rgba(d8b379ee) rgba(f6e9ceee) 90deg"
+border-error = "#D98A6A"
+border-alpha = 1.0
+border-width = 2
+scrim = "#041E22"
+scrim-alpha = 0.55
+accent = "#D8B379"
+
+[lock]
+background = "#041E22"
+background-alpha = 0.85
+text = "#E3CBA3"
+placeholder = "#E3CBA3B3"
+text-error = "#D98A6A"
+border = "rgba(d8b379ee) rgba(f6e9ceee) 90deg"
+border-active = "rgba(d8b379ee) rgba(f6e9ceee) 90deg"
+border-error = "#D98A6A"
+border-alpha = 1.0
+border-width = 2
+selection = "#D8B379"
+selection-alpha = 0.45
+
+[image-picker]
+text = "#E3CBA3"
+selected-border = "#D8B379"
+selected-border-alpha = 1.0
+unselected-border = "#E3CBA3"
+unselected-border-alpha = 0.3
