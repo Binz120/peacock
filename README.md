@@ -34,15 +34,19 @@ geometry falls back to the generated defaults.
 
 ## Wallpapers
 
-Four stills ship, the garden first on apply; cycle them with
+Four stills ship as WebP, the garden first on apply; cycle them with
 `omarchy theme bg next`.
 
-- `01-tokyo-garden.jpg` — [wallhaven oxqyxm](https://wallhaven.cc/w/oxqyxm), 3840×2160
-- `02-cat-in-the-grass.jpg` — [wallhaven k7dz96](https://wallhaven.cc/w/k7dz96), 3840×2160
-- `03-crop-duster-dusk.jpg` — [wallhaven 4gepx7](https://wallhaven.cc/w/4gepx7), 1920×1080
+- `01-tokyo-garden.webp` — [wallhaven oxqyxm](https://wallhaven.cc/w/oxqyxm), 3840×2160
+- `02-cat-in-the-grass.webp` — [wallhaven k7dz96](https://wallhaven.cc/w/k7dz96), 3840×2160
+- `03-crop-duster-dusk.webp` — [wallhaven 4gepx7](https://wallhaven.cc/w/4gepx7), 1920×1080
 - `04-autumn-road.webp` — [wallhaven vg8y95](https://wallhaven.cc/w/vg8y95), 1920×1080
 
-Your own wallpapers live outside the theme, in `~/.config/omarchy/backgrounds/peacock/`.
+Each still has a matching six-second intro clip in `backgrounds/intros/`, same
+name, 1920×1080 and silent: it opens at 1.08× and settles onto the still, and
+Omarchy plays it at login and when that wallpaper is selected, crossfading into
+the image. Your own wallpapers live outside the theme, in
+`~/.config/omarchy/backgrounds/peacock/`.
 
 ## Files
 
@@ -53,7 +57,7 @@ Your own wallpapers live outside the theme, in `~/.config/omarchy/backgrounds/pe
 - `btop.theme`, `chromium.theme`, `icons.theme`
 - `unlock.png` (800×188, transparent gold wordmark) and `preview-unlock.png`
   (1920×1080) — the boot-decryption design shown under Appearance → Unlock
-- `backgrounds/` — the four stills above
+- `backgrounds/` — the four stills above and their `intros/` clips
 - `preview.webp` — 1920×1080 desktop capture
 
 ## Notes
