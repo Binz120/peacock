@@ -40,7 +40,7 @@ Four stills ship, the garden first on apply; cycle them with
 - `01-tokyo-garden.jpg` — [wallhaven oxqyxm](https://wallhaven.cc/w/oxqyxm), 3840×2160
 - `02-cat-in-the-grass.jpg` — [wallhaven k7dz96](https://wallhaven.cc/w/k7dz96), 3840×2160
 - `03-crop-duster-dusk.jpg` — [wallhaven 4gepx7](https://wallhaven.cc/w/4gepx7), 1920×1080
-- `04-autumn-road.png` — [wallhaven vg8y95](https://wallhaven.cc/w/vg8y95), 1920×1080
+- `04-autumn-road.webp` — [wallhaven vg8y95](https://wallhaven.cc/w/vg8y95), 1920×1080
 
 Your own wallpapers live outside the theme, in `~/.config/omarchy/backgrounds/peacock/`.
 
