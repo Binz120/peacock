@@ -6,6 +6,8 @@ for body text, and gold `#D8B379` for the lettering. Every other token is a
 lift or drop of those four; hue only leaves them for the status and code slots,
 at lightness that keeps text at or above 4.5:1 on the field.
 
+![Peacock: four tiled terminals over the garden wallpaper](preview-busy.webp)
+![Peacock: editor, Flea and a bonsai pane](preview-work.webp)
 ![Peacock with a palette specimen and an editor open](preview.webp)
 
 The gold-to-parchment gradient rides the focused window, the bar and the popups;
@@ -58,7 +60,8 @@ the image. Your own wallpapers live outside the theme, in
 - `unlock.png` (800×188, transparent gold wordmark) and `preview-unlock.png`
   (1920×1080) — the boot-decryption design shown under Appearance → Unlock
 - `backgrounds/` — the four stills above and their `intros/` clips
-- `preview.webp` — 1920×1080 desktop capture
+- `preview.webp`, `preview-busy.webp`, `preview-work.webp` — 1920×1080 captures:
+  the desktop, four tiled terminals, and an editor-plus-Flea work screen
 
 ## Notes
 
