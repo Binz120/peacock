@@ -67,5 +67,6 @@ Your own wallpapers live outside the theme, in `~/.config/omarchy/backgrounds/pe
   text/background pair clears 3:1 and body text clears 4.5:1.
 - `pressed-color`, `selection-color`, `heading`, `icon-large` and the per-section
   `border-width` keys are read by the shell (`Style.qml`, `Color.qml`).
-- Wallpapers are third-party photographs; see LICENSE for what the MIT grant
-  covers.
+- Code and configuration are MIT (see `LICENSE`). The photographs under
+  `backgrounds/` are third-party works from wallhaven, each linked above, and
+  stay with their authors; the MIT grant does not cover them.

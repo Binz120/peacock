@@ -19,14 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-The licence above covers this theme's code and configuration: colors.toml,
-shell.toml, hyprland.lua, the terminal and editor configs, gtk.css, the
-generated assets, and the unlock artwork.
-
-The photographs under backgrounds/ are third-party works fetched from
-wallhaven and remain the property of their respective authors; they are
-included for personal desktop use only. Each file links to its wallhaven page
-in README.md.
